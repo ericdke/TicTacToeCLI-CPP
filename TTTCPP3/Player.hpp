@@ -17,10 +17,6 @@ class Player
 {
 public:
     Player(std::string m, std::string n) : mark(m), name(n) {};
-    ~Player()
-    {
-        std::cout << "PLAYER DESTROYED!!!" << std::endl;
-    }
     std::string mark;
     std::string name;
     std::vector<int> indices;

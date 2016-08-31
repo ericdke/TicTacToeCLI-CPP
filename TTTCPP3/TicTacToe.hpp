@@ -36,6 +36,7 @@ public:
     int random_in_range(int start, int end);
     int random_index();
     bool played_contains(int index);
+    void check_winner();
     void play();
 };
 

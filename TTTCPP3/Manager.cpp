@@ -26,13 +26,10 @@ void Manager::swap_player()
     }
 }
 
-void Manager::check_permutations(std::vector<int> indices)
+void Manager::update_indices(int idx)
 {
-    if(indices.size() > 3)
-    {
-        std::vector<std::vector<int>> perms;
-//        std::vector<std::vector<int>> pr = permutation(3, indices);
-    }
+    grid.update_index(idx, current_player);
+    current_player->indices.push_back(idx);
 }
 
 std::vector<std::vector<int>> Manager::combination(int length, std::vector<int> arr)

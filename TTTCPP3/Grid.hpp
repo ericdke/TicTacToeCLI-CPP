@@ -39,11 +39,6 @@ public:
             slots.push_back(Slot(i));
         }
     }
-    ~Grid()
-    {
-        std::cout << "GRID DESTROYED!!!" << std::endl;
-    }
-    
     std::vector<int> played;
     std::string description();
     void update_index(int index, Player *p);

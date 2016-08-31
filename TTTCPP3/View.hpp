@@ -15,10 +15,6 @@ class View
 {
 public:
     View(){};
-    ~View()
-    {
-        std::cout << "VIEW DESTROYED!!!" << std::endl;
-    }
     void announce(Player *p1, Player *p2);
     void player_plays(Player *pl);
     void show_grid(Grid *g);

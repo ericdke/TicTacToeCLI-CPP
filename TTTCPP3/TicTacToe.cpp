@@ -15,26 +15,28 @@ void TicTacToe::play()
     {
         view.player_plays(manager.current_player);
         int idx = random_index();
-        manager.grid.update_index(idx, manager.current_player);
-        manager.current_player->indices.push_back(idx);
+        manager.update_indices(idx);
         view.show_grid(&manager.grid);
-        // Debug
-        auto cb = manager.combination(3, manager.current_player->indices);
-        for(std::vector<int> &v : cb)
+        check_winner();
+        manager.swap_player();
+    }
+    view.no_winner();
+}
+
+void TicTacToe::check_winner()
+{
+    std::vector<std::vector<int>> cb = manager.combination(3, manager.current_player->indices);
+    for(std::vector<int> &v : cb)
+    {
+        sort(v.begin(), v.end());
+        for(std::vector<int> ws : winning_sequences)
         {
-            sort(v.begin(), v.end());
-            for(std::vector<int> ws : winning_sequences)
+            if(v == ws)
             {
-                if(v == ws)
-                {
-                    view.winner_is(manager.current_player);
-                    exit(0);
-                }
+                view.winner_is(manager.current_player);
+                exit(0);
             }
         }
-        
-        // TODO: check if win
-        manager.swap_player();
     }
 }
 

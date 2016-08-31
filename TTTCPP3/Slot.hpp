@@ -16,10 +16,6 @@ class Slot
 public:
     Slot(int i, Player *pl) : index(i), p(pl) {};
     Slot(int i) : index(i), p(nullptr) {};
-//    ~Slot()
-//    {
-//        std::cout << "SLOT " << index << " DESTROYED!!!" << std::endl;
-//    }
     int index;
     Player *p;
     std::string description();
