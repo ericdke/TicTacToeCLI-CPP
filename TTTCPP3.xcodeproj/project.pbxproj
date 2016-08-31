@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		C788C4791D7758D700A18C99 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C788C4781D7758D700A18C99 /* main.cpp */; };
+		C788C4811D77593800A18C99 /* Manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C788C47F1D77593800A18C99 /* Manager.cpp */; };
+		C788C4841D77596A00A18C99 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C788C4821D77596A00A18C99 /* Player.cpp */; };
+		C788C4871D775BEC00A18C99 /* Slot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C788C4851D775BEC00A18C99 /* Slot.cpp */; };
+		C788C48A1D775D4E00A18C99 /* Grid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C788C4881D775D4E00A18C99 /* Grid.cpp */; };
+		C788C48D1D77610900A18C99 /* View.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C788C48B1D77610900A18C99 /* View.cpp */; };
+		C788C4901D77634C00A18C99 /* TicTacToe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C788C48E1D77634C00A18C99 /* TicTacToe.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +31,18 @@
 /* Begin PBXFileReference section */
 		C788C4751D7758D700A18C99 /* TTTCPP3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TTTCPP3; sourceTree = BUILT_PRODUCTS_DIR; };
 		C788C4781D7758D700A18C99 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C788C47F1D77593800A18C99 /* Manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Manager.cpp; sourceTree = "<group>"; };
+		C788C4801D77593800A18C99 /* Manager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Manager.hpp; sourceTree = "<group>"; };
+		C788C4821D77596A00A18C99 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		C788C4831D77596A00A18C99 /* Player.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
+		C788C4851D775BEC00A18C99 /* Slot.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Slot.cpp; sourceTree = "<group>"; };
+		C788C4861D775BEC00A18C99 /* Slot.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Slot.hpp; sourceTree = "<group>"; };
+		C788C4881D775D4E00A18C99 /* Grid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Grid.cpp; sourceTree = "<group>"; };
+		C788C4891D775D4E00A18C99 /* Grid.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Grid.hpp; sourceTree = "<group>"; };
+		C788C48B1D77610900A18C99 /* View.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = View.cpp; sourceTree = "<group>"; };
+		C788C48C1D77610900A18C99 /* View.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = View.hpp; sourceTree = "<group>"; };
+		C788C48E1D77634C00A18C99 /* TicTacToe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TicTacToe.cpp; sourceTree = "<group>"; };
+		C788C48F1D77634C00A18C99 /* TicTacToe.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TicTacToe.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +76,18 @@
 			isa = PBXGroup;
 			children = (
 				C788C4781D7758D700A18C99 /* main.cpp */,
+				C788C48F1D77634C00A18C99 /* TicTacToe.hpp */,
+				C788C48E1D77634C00A18C99 /* TicTacToe.cpp */,
+				C788C4801D77593800A18C99 /* Manager.hpp */,
+				C788C47F1D77593800A18C99 /* Manager.cpp */,
+				C788C48C1D77610900A18C99 /* View.hpp */,
+				C788C48B1D77610900A18C99 /* View.cpp */,
+				C788C4891D775D4E00A18C99 /* Grid.hpp */,
+				C788C4881D775D4E00A18C99 /* Grid.cpp */,
+				C788C4861D775BEC00A18C99 /* Slot.hpp */,
+				C788C4851D775BEC00A18C99 /* Slot.cpp */,
+				C788C4831D77596A00A18C99 /* Player.hpp */,
+				C788C4821D77596A00A18C99 /* Player.cpp */,
 			);
 			path = TTTCPP3;
 			sourceTree = "<group>";
@@ -119,7 +149,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C788C48D1D77610900A18C99 /* View.cpp in Sources */,
 				C788C4791D7758D700A18C99 /* main.cpp in Sources */,
+				C788C4811D77593800A18C99 /* Manager.cpp in Sources */,
+				C788C4901D77634C00A18C99 /* TicTacToe.cpp in Sources */,
+				C788C4841D77596A00A18C99 /* Player.cpp in Sources */,
+				C788C4871D775BEC00A18C99 /* Slot.cpp in Sources */,
+				C788C48A1D775D4E00A18C99 /* Grid.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +252,8 @@
 		C788C47D1D7758D700A18C99 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/include;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -223,6 +261,8 @@
 		C788C47E1D7758D700A18C99 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/include;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
