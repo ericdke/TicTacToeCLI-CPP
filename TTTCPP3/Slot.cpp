@@ -12,18 +12,28 @@
 
 std::string Slot::description()
 {
-    
     if(p == nullptr)
-        return FMAG("-");
-    std::string m = p->mark;
-    if(isatty(1))
     {
-        if(m == "X")
-            return FBLU("X");
-        return FGRN("O");
+        if(isatty(1))
+        {
+            return FMAG("-");
+        }
+        else
+        {
+            return "-";
+        }
     }
     else
     {
-        return m;
+        if(isatty(1))
+        {
+            if(p->mark == "X")
+                return FBLU("X");
+            return FGRN("O");
+        }
+        else
+        {
+            return p->mark;
+        }
     }
 }
