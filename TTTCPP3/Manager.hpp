@@ -23,7 +23,6 @@ public:
     Player *current_player = &p1;
     void swap_player();
     std::vector<std::vector<int>> combination(int length, std::vector<int> arr);
-    void check_permutations(std::vector<int> indices);
     void update_indices(int idx);
 };
 
