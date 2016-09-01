@@ -33,6 +33,7 @@ std::string Slot::description()
         {
             // TODO: use enum or struct instead
             if(p->mark == "X")
+                // and/or use something else than this macro so we can pass variables
                 return FBLU("X");
             return FGRN("O");
         }
