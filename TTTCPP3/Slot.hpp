@@ -10,12 +10,14 @@
 #define Slot_hpp
 
 #include "Player.hpp"
+#include <stdlib.h>
 
 class Slot
 {
 public:
-    Slot(int i, Player *pl) : index(i), p(pl) {};
-    Slot(int i) : index(i), p(nullptr) {};
+    bool is_term;
+    Slot(int i, Player *pl, bool t) : index(i), p(pl), is_term(t) {};
+    Slot(int i, bool t) : index(i), p(nullptr), is_term(t) {};
     int index;
     Player *p;
     std::string description();

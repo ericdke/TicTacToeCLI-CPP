@@ -30,13 +30,15 @@ class Grid
         }
         return outVec;
     }
+    bool get_term();
 public:
     std::vector<Slot> slots;
     Grid()
     {
+        bool t = get_term();
         slots.reserve(9);
         for (int i = 0; i < 9; i++) {
-            slots.push_back(Slot(i));
+            slots.push_back(Slot(i, t));
         }
     }
     std::vector<int> played;

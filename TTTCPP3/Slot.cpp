@@ -12,28 +12,33 @@
 
 std::string Slot::description()
 {
-    if(p == nullptr)
+    if(!is_term)
     {
-        if(isatty(1))
-        {
-            return FMAG("-");
-        }
-        else
+        if(p == nullptr)
         {
             return "-";
-        }
-    }
-    else
-    {
-        if(isatty(1))
-        {
-            if(p->mark == "X")
-                return FBLU("X");
-            return FGRN("O");
         }
         else
         {
             return p->mark;
         }
     }
+    else
+    {
+        if(p == nullptr)
+        {
+            return FMAG("-");
+        }
+        else
+        {
+            // TODO: use enum or struct instead
+            if(p->mark == "X")
+                return FBLU("X");
+            return FGRN("O");
+        }
+    }
 }
+
+
+
+

@@ -27,3 +27,10 @@ std::string Grid::description()
     }
     return ss.str();
 }
+
+bool Grid::get_term()
+{
+    char* e;
+    e = getenv("TERM");
+    return e != NULL;
+}
