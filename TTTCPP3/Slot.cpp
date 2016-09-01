@@ -14,7 +14,7 @@ std::string Slot::description()
 {
     
     if(p == nullptr)
-        return "-";
+        return FMAG("-");
     std::string m = p->mark;
     if(isatty(1))
     {
