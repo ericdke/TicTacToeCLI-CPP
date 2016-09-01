@@ -29,6 +29,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0650C1231D7839520007E9B7 /* Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colors.h; sourceTree = "<group>"; };
 		C788C4751D7758D700A18C99 /* TTTCPP3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TTTCPP3; sourceTree = BUILT_PRODUCTS_DIR; };
 		C788C4781D7758D700A18C99 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C788C47F1D77593800A18C99 /* Manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Manager.cpp; sourceTree = "<group>"; };
@@ -78,6 +79,7 @@
 				C788C4781D7758D700A18C99 /* main.cpp */,
 				C788C48F1D77634C00A18C99 /* TicTacToe.hpp */,
 				C788C48E1D77634C00A18C99 /* TicTacToe.cpp */,
+				0650C1231D7839520007E9B7 /* Colors.h */,
 				C788C4801D77593800A18C99 /* Manager.hpp */,
 				C788C47F1D77593800A18C99 /* Manager.cpp */,
 				C788C48C1D77610900A18C99 /* View.hpp */,
@@ -286,6 +288,7 @@
 				C788C47E1D7758D700A18C99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

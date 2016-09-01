@@ -7,10 +7,23 @@
 //
 
 #include "Slot.hpp"
+#include "Colors.h"
+#include <unistd.h>
 
 std::string Slot::description()
 {
+    
     if(p == nullptr)
-        return "?";
-    return p->mark;
+        return "-";
+    std::string m = p->mark;
+    if(isatty(1))
+    {
+        if(m == "X")
+            return FBLU("X");
+        return FGRN("O");
+    }
+    else
+    {
+        return m;
+    }
 }
