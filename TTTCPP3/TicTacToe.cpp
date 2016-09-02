@@ -10,22 +10,56 @@
 
 void TicTacToe::play()
 {
-    view.announce(&manager.p1, &manager.p2);
+    view.announce(manager.player_1(), manager.player_2());
     for (int i = 0; i < 9; i++)
     {
-        view.player_plays(manager.current_player);
+        view.player_plays(manager.current_player());
         int idx = random_index();
         manager.update_indices(idx);
-        view.show_grid(&manager.grid);
+        view.show_grid(manager.get_grid());
         check_winner();
         manager.swap_player();
     }
     view.no_winner();
 }
 
+std::vector<std::vector<int>> TicTacToe::combination(int length, std::vector<int> arr)
+{
+    if (length < 0 || length > arr.size()) {
+        return std::vector<std::vector<int>>();
+    }
+    std::vector<int> indexes;
+    for (int idx = 0; idx < length; idx++) {
+        indexes.push_back(idx);
+    }
+    std::vector<std::vector<int>> combinations;
+    auto offset = arr.size() - indexes.size();
+    while (true) {
+        std::vector<int> combination;
+        for(int idx : indexes)
+        {
+            combination.push_back(arr[idx]);
+        }
+        combinations.push_back(combination);
+        auto i = indexes.size() - 1;
+        while ((int)i >= 0 && indexes[i] == i + offset) {
+            i--;
+        }
+        if ((int)i < 0) {
+            break;
+        }
+        i++;
+        int start = indexes[i - 1] + 1;
+        for (int j = (int)i - 1; j < indexes.size(); j++) {
+            indexes[j] = start + j - (int)i + 1;
+        }
+    }
+    return combinations;
+}
+
 void TicTacToe::check_winner()
 {
-    std::vector<std::vector<int>> cb = manager.combination(3, manager.current_player->indices);
+    std::vector<std::vector<int>> cb = combination(3, manager.current_player()->indices);
     for(std::vector<int> &v : cb)
     {
         sort(v.begin(), v.end());
@@ -33,7 +67,7 @@ void TicTacToe::check_winner()
         {
             if(v == ws)
             {
-                view.winner_is(manager.current_player);
+                view.winner_is(manager.current_player());
                 exit(0);
             }
         }
@@ -59,7 +93,7 @@ int TicTacToe::random_index()
 
 bool TicTacToe::played_contains(int index)
 {
-    for(int p : manager.grid.played)
+    for(int p : manager.get_grid()->played)
         if(p == index)
             return true;
     return false;

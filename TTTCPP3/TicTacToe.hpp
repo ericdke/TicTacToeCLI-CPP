@@ -17,7 +17,8 @@
 
 class TicTacToe
 {
-public:
+    Manager manager;
+    View view;
     std::vector<std::vector<int>> const winning_sequences = {
         // Horizontal
         {0,1,2},
@@ -31,12 +32,12 @@ public:
         {1,4,7},
         {2,5,8}
     };
-    Manager manager;
-    View view;
     int random_in_range(int start, int end);
     int random_index();
     bool played_contains(int index);
     void check_winner();
+    std::vector<std::vector<int>> combination(int length, std::vector<int> arr);
+public:
     void play();
 };
 
