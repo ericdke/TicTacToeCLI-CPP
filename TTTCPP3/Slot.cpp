@@ -10,18 +10,13 @@
 #include "Colors.h"
 #include <unistd.h>
 
-std::string Slot::description()
+std::string const Slot::description()
 {
     if(!is_term)
     {
         if(p == nullptr)
-        {
             return "-";
-        }
-        else
-        {
-            return p->mark;
-        }
+        return p->get_mark();
     }
     else
     {
@@ -32,7 +27,7 @@ std::string Slot::description()
         else
         {
             // TODO: use enum or struct instead
-            if(p->mark == "X")
+            if(p->get_mark() == "X")
                 // and/or use something else than this macro so we can pass variables
                 return FBLU("X");
             return FGRN("O");
@@ -40,6 +35,10 @@ std::string Slot::description()
     }
 }
 
+void Slot::set_player(Player *player)
+{
+    p = player;
+}
 
 
 

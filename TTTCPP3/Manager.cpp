@@ -54,7 +54,7 @@ void Manager::swap_player()
 void Manager::update_indices(int idx)
 {
     g.update_index(idx, cp);
-    cp->indices.push_back(idx);
+    cp->update_indices(idx);
 }
 
 

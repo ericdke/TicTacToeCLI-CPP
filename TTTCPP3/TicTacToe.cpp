@@ -59,7 +59,7 @@ std::vector<std::vector<int>> TicTacToe::combination(int length, std::vector<int
 
 void TicTacToe::check_winner()
 {
-    std::vector<std::vector<int>> cb = combination(3, manager.current_player()->indices);
+    std::vector<std::vector<int>> cb = combination(3, *manager.current_player()->get_indices());
     for(std::vector<int> &v : cb)
     {
         sort(v.begin(), v.end());
@@ -93,7 +93,7 @@ int TicTacToe::random_index()
 
 bool TicTacToe::played_contains(int index)
 {
-    for(int p : manager.get_grid()->played)
+    for(int p : *manager.get_grid()->played_indices())
         if(p == index)
             return true;
     return false;

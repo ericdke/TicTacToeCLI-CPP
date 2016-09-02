@@ -15,11 +15,17 @@
 
 class Player
 {
-public:
-    Player(std::string m, std::string n) : mark(m), name(n) {};
     std::string mark;
     std::string name;
     std::vector<int> indices;
+public:
+    Player(std::string m, std::string n) : mark(m), name(n) {};
+    // get
+    std::string const get_mark();
+    std::string const get_name();
+    std::vector<int>* const get_indices();
+    // set
+    void update_indices(int index);
 };
 
 #endif /* Player_hpp */

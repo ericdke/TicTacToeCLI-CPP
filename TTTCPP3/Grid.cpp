@@ -8,13 +8,18 @@
 
 #include "Grid.hpp"
 
+std::vector<int>* const Grid::played_indices()
+{
+    return &played;
+}
+
 void Grid::update_index(int index, Player *p)
 {
     played.push_back(index);
-    slots[index].p = p;
+    slots[index].set_player(p);
 }
 
-std::string Grid::description()
+std::string const Grid::description()
 {
     std::stringstream ss;
     for(std::vector<Slot> iv : SplitVector(slots, 3))

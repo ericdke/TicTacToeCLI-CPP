@@ -31,8 +31,9 @@ class Grid
         return outVec;
     }
     bool get_term();
-public:
     std::vector<Slot> slots;
+    std::vector<int> played;
+public:
     Grid()
     {
         bool t = get_term();
@@ -41,8 +42,10 @@ public:
             slots.push_back(Slot(i, t));
         }
     }
-    std::vector<int> played;
-    std::string description();
+    // get
+    std::string const description();
+    std::vector<int>* const played_indices();
+    // set
     void update_index(int index, Player *p);
 };
 

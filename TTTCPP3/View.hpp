@@ -15,11 +15,11 @@ class View
 {
 public:
     View(){};
-    void announce(Player *p1, Player *p2);
-    void player_plays(Player *pl);
-    void show_grid(Grid *g);
-    void no_winner();
-    void winner_is(Player *pl);
+    void const announce(Player *p1, Player *p2);
+    void const player_plays(Player *pl);
+    void const show_grid(Grid *g);
+    void const no_winner();
+    void const winner_is(Player *pl);
 };
 
 #endif /* View_hpp */

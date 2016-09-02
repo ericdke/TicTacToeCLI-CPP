@@ -8,28 +8,28 @@
 
 #include "View.hpp"
 
-void View::announce(Player *p1, Player *p2)
+void const View::announce(Player *p1, Player *p2)
 {
-    std::cout << p1->name + " has symbol " + p1->mark << std::endl;
-    std::cout << p2->name + " has symbol " + p2->mark << std::endl;
+    std::cout << p1->get_name() + " has symbol " + p1->get_mark() << std::endl;
+    std::cout << p2->get_name() + " has symbol " + p2->get_mark() << std::endl;
 }
 
-void View::player_plays(Player *pl)
+void const View::player_plays(Player *pl)
 {
-    std::cout << pl->name + " plays:\n" << std::endl;
+    std::cout << pl->get_name() + " plays:\n" << std::endl;
 }
 
-void View::show_grid(Grid *g)
+void const View::show_grid(Grid *g)
 {
     std::cout << g->description() << std::endl;
 }
 
-void View::no_winner()
+void const View::no_winner()
 {
     std::cout << "No winner. They're both too dumb." << std::endl;
 }
 
-void View::winner_is(Player *pl)
+void const View::winner_is(Player *pl)
 {
-    std::cout << pl->name + " is the winner!" << std::endl;
+    std::cout << pl->get_name() + " is the winner!" << std::endl;
 }

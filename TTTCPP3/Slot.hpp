@@ -14,13 +14,16 @@
 
 class Slot
 {
-public:
     bool is_term;
+    int index;
+    Player* p;
+public:
     Slot(int i, Player *pl, bool t) : index(i), p(pl), is_term(t) {};
     Slot(int i, bool t) : index(i), p(nullptr), is_term(t) {};
-    int index;
-    Player *p;
-    std::string description();
+    // set
+    void set_player(Player* player);
+    // get
+    std::string const description();
 };
 
 #endif /* Slot_hpp */
