@@ -11,7 +11,7 @@
 void const View::announce(Player *p1, Player *p2)
 {
     std::cout << p1->get_name() + " has symbol " + p1->get_mark() << std::endl;
-    std::cout << p2->get_name() + " has symbol " + p2->get_mark() << std::endl;
+    std::cout << p2->get_name() + " has symbol " + p2->get_mark() + "\n" << std::endl;
 }
 
 void const View::player_plays(Player *pl)
@@ -26,10 +26,10 @@ void const View::show_grid(Grid *g)
 
 void const View::no_winner()
 {
-    std::cout << "No winner. They're both too dumb." << std::endl;
+    std::cout << "No winner. They're both too dumb.\n" << std::endl;
 }
 
 void const View::winner_is(Player *pl)
 {
-    std::cout << pl->get_name() + " is the winner!" << std::endl;
+    std::cout << pl->get_name() + " is the winner!\n" << std::endl;
 }
